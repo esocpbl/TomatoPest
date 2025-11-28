@@ -8,14 +8,14 @@ This repository contains a complete setup for training YOLOv8 models to detect a
 TomatoPest/
 ├── dataset/
 │   ├── train/
-│   │   ├── aphids/
-│   │   ├── whitefly/
-│   │   ├── thrips/
-│   │   ├── tomato_hornworm/
-│   │   ├── cutworm/
-│   │   ├── colorado_beetle/
-│   │   ├── spider_mite/
-│   │   └── leafminer/
+│   │   ├── BA/
+│   │   ├── HA/
+│   │   ├── MP/
+│   │   ├── SE/
+│   │   ├── SL/
+│   │   ├── TP/
+│   │   ├── TU/
+│   │   └── ZC/
 │   ├── val/
 │   │   └── [same 8 pest folders]
 │   └── test/
