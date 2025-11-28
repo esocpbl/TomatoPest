@@ -31,7 +31,7 @@ TomatoPest/
 └── requirements.txt
 ```
 
-## Pest Classes
+## Pest Classes Name
 
 1. **BA** - Bemisia Argentifolii (Kutu kebul / Whitefly)
 2. **HA** - Helicoverpa Armigera (Ulat buah kapas / ulat penggerek buah jagung)
