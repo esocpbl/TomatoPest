@@ -1,5 +1,6 @@
 import os
 import torch
+import torch.serialization
 from ultralytics import YOLO
 from pathlib import Path
 
@@ -8,6 +9,7 @@ def main():
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     print(f"Using device: {device}")
     
+
     # Verify config exists
     config_path = Path('configs/tomato_pest.yaml')
     if not config_path.exists():
@@ -15,8 +17,11 @@ def main():
 
     # Load YOLOv8 model
     print("Loading YOLOv8 model...")
-    model = YOLO('yolov8n.pt')  # You can use yolov8s.pt, yolov8m.pt, yolov8l.pt, yolov8x.pt
     
+    # Add safe globals for PyTorch 2.6+ compatibility
+    torch.serialization.add_safe_globals(['ultralytics.nn.tasks.DetectionModel'])
+    
+    model = YOLO('yolov8n.pt')  # You can use yolov8s.pt, yolov8m.pt, yolov8l.pt, yolov8x.pt
     # Train the model
     results = model.train(
         data='configs/tomato_pest.yaml',
@@ -68,7 +73,7 @@ def main():
     
     # Test the model
     print("Testing model...")
-    test_results = model.test()
+    test_results = model.val(split='test')
     
     print("Training completed!")
     print(f"Model saved in: models/tomato_pest_detector/")
