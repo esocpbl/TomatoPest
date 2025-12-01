@@ -1,23 +1,20 @@
-# YOLOv8 Configuration for Tomato Pest Detection
-
-# Dataset paths
-# Dataset paths
-path: dataset # dataset root dir
-train: train/images # train images (relative to 'path')
-val: val/images # val images (relative to 'path')
-test: test/images # test images (optional)
-
-# Number of classes
+path: D:\Python\TomatoPest\dataset
+train: train/images
+val: valid/images
+test: test/images
 nc: 8
-
-# Class names
-# Class names
 names:
-  0: TU - Tetranychus urticae
-  1: BA - Bemisia argentifolii
-  2: ZC - Zeugodacus cucurbitae
-  3: TP - Thrips palmi
-  4: MP - Myzus persicae
-  5: SL - Spodoptera litura
-  6: SE - Spodoptera exigua
-  7: HA - Helicoverpa armigera
+- Beet Armyworm-3
+- Cotton Bollworm-1
+- Green Peach Aphid-2
+- Melon Fruit Fly-7
+- Silverleaf Whitefly-0
+- Tobacco Cutworm-4
+- Two-spotted Spider Mite-6
+- Western Flower Thrips-5
+roboflow:
+  workspace: esocfall
+  project: tomato_yolo-xmckl
+  version: 4
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/esocfall/tomato_yolo-xmckl/dataset/4
