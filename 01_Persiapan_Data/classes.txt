@@ -1,0 +1,20 @@
+0: kutu_kebul
+1: helicoverpa_armigera
+2: aphids
+
+PANDUAN PELABELAN DATASET (YOLOv8)
+----------------------------------
+
+Urutan ID Kelas (Wajib sesuai urutan ini saat menggunakan LabelImg):
+
+[0] kutu_kebul
+    -> Ciri-ciri: Serangga kecil berwarna putih, biasanya bergerombol di balik daun.
+
+[1] helicoverpa_armigera
+    -> Ciri-ciri: Ulat pemakan buah/daun, tubuh panjang, warna hijau/kecoklatan.
+
+[2] aphids
+    -> Ciri-ciri: Kutu daun kecil, warna hijau muda/kuning, bergerombol di batang/daun muda.
+
+CATATAN:
+Pastikan file data.yaml memiliki urutan 'names' yang sama persis dengan daftar di atas.

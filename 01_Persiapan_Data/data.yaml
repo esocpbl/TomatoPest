@@ -1,0 +1,16 @@
+# Lokasi folder utama dataset (ABSOLUT PATH LAPTOPMU)
+path: C:/Users/ASUS/Proyek_Deteksi_Hama_Tomat/dataset_final
+
+# Lokasi folder gambar (relatif terhadap path di atas)
+train: train/images
+val: val/images
+test: test/images
+
+# Jumlah kelas (hama)
+nc: 3
+
+# Nama kelas (WAJIB SESUAI URUTAN classes.txt)
+names:
+  0: kutu_kebul
+  1: helicoverpa_armigera
+  2: aphids
